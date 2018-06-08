@@ -76,28 +76,6 @@ export default {
     width: 100%;
   }
 }
-.blur {
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
-}
-.slider-section{
-  position: relative;
-  z-index: 2;
-  background-color: yellow;
-}
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
-.component-fade-enter-active, .component-fade-leave-active {
-  transition: opacity .1s ease;
-}
-.component-fade-enter, .component-fade-leave-to
-/* .component-fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
 .wrap {
   display: flex;
   align-items: center;
@@ -108,6 +86,9 @@ export default {
   position: relative;
   width: 500px;
   height: 500px;
+  box-shadow: 0 20px 32px 0 rgba(0,0,0,0.3),0 12px 40px 0 rgba(0,0,0,0.29) !important;
+  border-radius: 10px;
+  overflow: hidden;
   &>li {
     position: absolute;
     top: 0;
@@ -118,5 +99,11 @@ export default {
     content: "";
     clear: both;
     display: table;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
