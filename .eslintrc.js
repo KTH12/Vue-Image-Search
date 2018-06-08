@@ -45,6 +45,13 @@ module.exports = {
       optionalDependencies: ['test/unit/index.js']
     }],
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-constant-condition': ["error", { "checkLoops": false }],
+    'no-unused-vars': ["error", {"args": "none" , "ignoreRestSiblings": false}],
+    'no-param-reassign': ["error", { "props": false }],
+    'no-return-assign': "error",
+    'no-console': ["error", { allow: ["warn", "error","log"] }],
+    'prefer-const': ["error", {"ignoreReadBeforeAssign": false}],
+    'no-restricted-syntax': ["error", "WithStatement", "BinaryExpression[operator='in']"],
   }
 }
